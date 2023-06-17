@@ -1,3 +1,3 @@
 - 이름 : 김범진
 - 실행 방법 : npm install & npm start
-- 배포 링크 :
+- 배포 링크 : https://wanted-beomjin.netlify.app/
