@@ -2,7 +2,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Signin from "./pages/Signin";
 import Signup from "./pages/Signup";
-import Todo from "./pages/Todo";
+import TodoPage from "./pages/Todo";
 
 function App() {
   return (
@@ -10,7 +10,7 @@ function App() {
       <Routes>
         <Route path="/signup" element={<Signup />} />
         <Route path="/signin" element={<Signin />} />
-        <Route path="/todo" element={<Todo />} />
+        <Route path="/todo" element={<TodoPage />} />
       </Routes>
     </BrowserRouter>
   );

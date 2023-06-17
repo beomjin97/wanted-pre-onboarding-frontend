@@ -27,10 +27,10 @@ const AuthForm = ({
   const handleSubmit = () =>
     submit({ email, password })
       .then((res) => {
-        if (usage === FormUsage.signin) {
-          navigate("/signup");
+        if (usage === FormUsage.signup) {
+          navigate("/signin");
         } else {
-          localStorage.setItem("token", JSON.stringify(res.data));
+          localStorage.setItem("token", res.data.access_token);
           navigate("/todo");
         }
       })
@@ -53,7 +53,7 @@ const AuthForm = ({
         />
       </Form.Group>
       <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
-        <Form.Label>Example textarea</Form.Label>
+        <Form.Label>Password</Form.Label>
         <Form.Control
           type="password"
           data-testid="password-input"
