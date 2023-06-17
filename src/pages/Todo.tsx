@@ -23,7 +23,7 @@ const TodoPage = () => {
       navigate("/signin");
     }
     reload();
-  }, []);
+  }, [navigate]);
 
   return (
     <>

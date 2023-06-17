@@ -14,7 +14,7 @@ const Signup = () => {
     if (localStorage.getItem("token")) {
       navigate("/todo");
     }
-  }, []);
+  }, [navigate]);
 
   return (
     <AuthForm
