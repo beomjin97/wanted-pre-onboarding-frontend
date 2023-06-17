@@ -21,8 +21,9 @@ const TodoPage = () => {
   useEffect(() => {
     if (!localStorage.getItem("token")) {
       navigate("/signin");
+    } else {
+      reload();
     }
-    reload();
   }, [navigate]);
 
   return (

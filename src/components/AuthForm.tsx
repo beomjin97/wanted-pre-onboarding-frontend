@@ -1,4 +1,4 @@
-import { Dispatch, FormEvent, SetStateAction, SyntheticEvent } from "react";
+import { Dispatch, FormEvent, SetStateAction } from "react";
 import { Form, Button } from "react-bootstrap";
 import { FormUsage } from "../type/form";
 import { FormData } from "../type/form";
@@ -26,9 +26,11 @@ const AuthForm = ({
 
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    console.log("submit");
     submit({ email, password })
       .then((res) => {
         if (usage === FormUsage.signup) {
+          console.log("usage", usage);
           navigate("/signin");
         } else {
           localStorage.setItem("token", res.data.access_token);
