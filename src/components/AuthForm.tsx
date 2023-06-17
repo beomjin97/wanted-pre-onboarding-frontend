@@ -1,4 +1,4 @@
-import { Dispatch, SetStateAction } from "react";
+import { Dispatch, FormEvent, SetStateAction, SyntheticEvent } from "react";
 import { Form, Button } from "react-bootstrap";
 import { FormUsage } from "../type/form";
 import { FormData } from "../type/form";
@@ -24,7 +24,8 @@ const AuthForm = ({
 }: Props) => {
   const navigate = useNavigate();
 
-  const handleSubmit = () =>
+  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
     submit({ email, password })
       .then((res) => {
         if (usage === FormUsage.signup) {
@@ -37,6 +38,7 @@ const AuthForm = ({
       .catch((err) => {
         alert(err);
       });
+  };
 
   return (
     <Form className="w-25 h-25 m-3" onSubmit={handleSubmit}>
