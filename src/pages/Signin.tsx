@@ -1,7 +1,31 @@
-import React from "react";
+import { useState, useEffect } from "react";
+import AuthForm from "../components/AuthForm";
+import { FormUsage } from "../type/form";
+import { signIn } from "../api/auth";
+import { useNavigate } from "react-router-dom";
 
 const Signin = () => {
-  return <div>Signin</div>;
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    if (localStorage.getItem("token")) {
+      navigate("/todo");
+    }
+  }, []);
+
+  return (
+    <AuthForm
+      usage={FormUsage.signin}
+      email={email}
+      password={password}
+      setEmail={setEmail}
+      setPassword={setPassword}
+      submit={signIn}
+    />
+  );
 };
 
 export default Signin;
