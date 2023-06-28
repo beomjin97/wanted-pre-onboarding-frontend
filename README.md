@@ -2,12 +2,14 @@
 - 실행 방법 : npm install & npm start
 - 배포 링크 : https://wanted-beomjin.netlify.app/
 
+<br>
+
 # 진행가이드 준수 여부
 
 - Create React App 이용 ✅
 - git clone & npm install & npm start ✅
 - 함수 컴포넌트 ✅
-- README.md (성명, 실행방법, 데모영상 또는 링크) ✅
+- README.md (성명, 실행방법, 데모영상 또는 <b>링크<b>) ✅
 - 사용가능 라이브러리 준수 ✅
 - 도메인 URL 바로 뒤에 이어지게 경로 설정 ✅
 
@@ -19,26 +21,26 @@
     ┣ 📂api
     ┃ ┣ 📜auth.ts
     ┃ ┣ 📜axiosInstance.ts
-    ┃ ┣ 📜todo.ts
+    ┃ ┗ 📜todo.ts
     ┣ 📂components
     ┃ ┣ 📜AuthForm.tsx
-    ┃ ┣ 📜TodoItem.tsx
+    ┃ ┗ 📜TodoItem.tsx
     ┣ 📂pages
     ┃ ┣ 📜Home.tsx
     ┃ ┣ 📜Signin.tsx
     ┃ ┣ 📜Signup.tsx
-    ┃ ┣ 📜Todo.tsx
+    ┃ ┗ 📜Todo.tsx
     ┣ 📂type
     ┃ ┣ 📜form.ts
-    ┃ ┣ 📜todo.ts
+    ┃ ┗ 📜todo.ts
     ┣ 📜App.tsx
-    ┣ 📜index.ts
+    ┗ 📜index.ts
 
 <br>
 
 # 과제 요구사항 구현
 
-어떻게 best practice라고 글로 설명해야 할지 잘 모르겠어서 과제에서 구현하기를 요구했던 기능의 핵심 로직이라고 생각되는 코드들의 위치만 일단 남겨두었습니다. ( \_ \_ )
+어떻게 글로 설명해야 할지 잘 모르겠어서 과제에서 구현하기를 요구했던 기능의 핵심 로직이라고 생각되는 코드들의 위치만 일단 남겨두었습니다. ( \_ \_ )
 
 ## 1. 로그인 / 회원가입
 
@@ -149,3 +151,15 @@
 - 취소 버튼 클릭시 수정한 내용 초기화하고 수정모드 비활성화
   - src/components/TodoItem.tsx
     - line 61 (onClick)
+
+<br>
+<br>
+<br>
+<br>
+
+개선하고 싶은 것 (팀원 분들께 여쭤보고 싶은 것).
+
+- 에러핸들링 (에러 페이지 or 예외 처리)
+- 공통로직 추출
+- 컴포넌트 분리
+- 기타 다른 지적 부탁드립니다...
