@@ -59,6 +59,7 @@ const TodoItem = ({ id, isCompleted, userId, todo, setTodos }: Props) => {
           <button
             data-testid="cancel-button"
             onClick={() => {
+              setModifiedTodo("");
               setIsEditing(false);
             }}
           >
